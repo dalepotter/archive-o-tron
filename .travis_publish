@@ -17,15 +17,22 @@ echo "list filepaths"
 echo $REPO_PATH/docs
 pwd
 echo "copy new files"
-cp -r docs/* .
+cp -r docs/* . # no such folder
 echo "list files"
 ls -lh
+echo "find files with matching name"
+find / -name '*Grand_Bargain_Dashboard.html*'
 
 # Commit and push latest version
+echo "git status"
 git status
+echo "git add"
 git add .
+echo "git config"
 git config user.name  "Travis"
 git config user.email "travis@travis-ci.org"
+echo "git commit"
 git commit -m "Add archived data"
+echo "git push"
 git push -fq origin $PUBLICATION_BRANCH 2>&1 > /dev/null
 popd
