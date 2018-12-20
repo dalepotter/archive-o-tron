@@ -13,4 +13,4 @@ deploy:
   keep-history: true
   local-dir: docs
   on:
-    branch: retain-existing-files-after-success
+    branch: master
