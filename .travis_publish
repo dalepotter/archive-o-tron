@@ -9,9 +9,13 @@ cd publish
 
 # Update pages
 echo "copy files"
+# TODO The following command will copy files already in the repo to this folder, but we need to find out where the files downloaded in this build are!
 cp -r $REPO_PATH/docs/* .
 echo "list files"
 ls -lh
+echo "list filepaths"
+echo $REPO_PATH/docs
+pwd
 
 # Commit and push latest version
 git status
