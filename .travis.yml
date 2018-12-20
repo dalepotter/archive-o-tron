@@ -3,7 +3,8 @@ python:
   - "3.6"
 script:
   - ./archiver.sh
-
+after_success:
+  - ./add_existing_files.sh
 deploy:
   provider: pages
   target-branch: gh-pages
