@@ -8,4 +8,4 @@ deploy:
   provider: script
   script: bash .travis_publish
   on:
-    branch: master
+    branch: retain-existing-files
