@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "Current directory: $(pwd)"
+
 declare -A urls=(
   ["IATI_Dashboard_dev_Humanitarian"]="http://dev.dashboard.iatistandard.org/humanitarian.html"
   ["IATI_Dashboard_Humanitarian"]="http://dashboard.iatistandard.org/humanitarian.html"

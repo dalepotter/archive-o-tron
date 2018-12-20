@@ -1,4 +1,6 @@
 #!/bin/bash
+set -x #echo on
+
 echo "find files with matching name (before anything)"
 find / -name '*Grand_Bargain_Dashboard.html*' 2>&1 | grep --invert-match "Permission denied"
 PUBLICATION_BRANCH=gh-pages
@@ -19,7 +21,7 @@ echo "list filepaths"
 echo $REPO_PATH/docs
 pwd
 echo "copy new files"
-cp -r ../docs/* . # no such folder
+cp -r ~/build/dalepotter/archive-o-tron/docs/* .
 echo "list files"
 ls -lh
 echo "find files with matching name (after clone)"
