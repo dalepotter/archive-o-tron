@@ -8,9 +8,13 @@ git clone --branch=$PUBLICATION_BRANCH https://${GITHUB_TOKEN}@github.com/$TRAVI
 cd publish
 
 # Update pages
+echo "copy files"
 cp -r $REPO_PATH/docs/* .
+echo "list files"
+ls -lh
 
 # Commit and push latest version
+git status
 git add .
 git config user.name  "Travis"
 git config user.email "travis@travis-ci.org"
