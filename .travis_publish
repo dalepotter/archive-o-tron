@@ -8,7 +8,7 @@ git clone --branch=$PUBLICATION_BRANCH https://${GITHUB_TOKEN}@github.com/$TRAVI
 cd publish
 
 # Update pages
-echo "copy files"
+echo "copy existing files"
 # TODO The following command will copy files already in the repo to this folder, but we need to find out where the files downloaded in this build are!
 cp -r $REPO_PATH/docs/* .
 echo "list files"
@@ -16,6 +16,10 @@ ls -lh
 echo "list filepaths"
 echo $REPO_PATH/docs
 pwd
+echo "copy new files"
+cp -r docs/* .
+echo "list files"
+ls -lh
 
 # Commit and push latest version
 git status
