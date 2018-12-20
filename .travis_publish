@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "find files with matching name (before anything)"
+find / -name '*Grand_Bargain_Dashboard.html*' 2>&1 | grep --invert-match "Permission denied"
 PUBLICATION_BRANCH=gh-pages
 
 # Checkout the branch
@@ -17,11 +19,11 @@ echo "list filepaths"
 echo $REPO_PATH/docs
 pwd
 echo "copy new files"
-cp -r docs/* . # no such folder
+cp -r ../docs/* . # no such folder
 echo "list files"
 ls -lh
-echo "find files with matching name"
-find / -name '*Grand_Bargain_Dashboard.html*'
+echo "find files with matching name (after clone)"
+find / -name '*Grand_Bargain_Dashboard.html*' 2>&1 | grep --invert-match "Permission denied"
 
 # Commit and push latest version
 echo "git status"
